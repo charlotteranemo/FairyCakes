@@ -1,0 +1,36 @@
+﻿@model FairyCakes.Models.OrderModel
+@{
+    ViewData["Title"] = "Order";
+}
+
+<h1>Order a Cake</h1>
+
+<form method="post" asp-controller="Home">
+    <label asp-for="CustomerName"></label><br />
+    <input asp-for="CustomerName" />
+    <span asp-validation-for="CustomerName"></span><br />
+    <label asp-for="Phone"></label><br />
+    <input asp-for="Phone" />
+    <span asp-validation-for="Phone"></span><br />
+    <label asp-for="Cake"></label><br />
+    <select asp-for="Cake" asp-items="Model.Cakes"></select>
+    <p>Do you want your cake to have a custom message?</p>
+    <input asp-for="Customisation" />
+    <label id="Customise" asp-for="Customisation"></label><br />
+    <div id="customMsg">
+        <label asp-for="CustomisationString"></label>
+        <input asp-for="CustomisationString" /><br />
+    </div>
+    <span asp-validation-for="CustomisationString"></span><br />
+    <p>What size do you want your cake to be?</p>
+    @foreach (var sliceNum in Model.Slices)
+    {
+        <input type="radio" value="@sliceNum.Value" asp-for="Slice" /> <label class="Slice" asp-for="Slice">@sliceNum.Text</label><br />
+    }
+    <span asp-validation-for="Slice"></span><br />
+    <label asp-for="PickupDay"></label><br />
+    <input min="@DateTime.Now.ToString("yyyy-MM-dd")" max="@DateTime.Now.AddDays(30).ToString("yyyy-MM-dd")" asp-for="PickupDay" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+    <span asp-validation-for="PickupDay"></span><br />
+    <input type="submit" value="Place order" id="btn" />
+</form>
+<partial name="~/Views/Shared/_Cookies.cshtml" />

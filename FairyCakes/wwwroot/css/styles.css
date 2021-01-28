@@ -1,0 +1,405 @@
+﻿/*---CSS Reset---*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font: inherit;
+    font-weight: 400;
+    line-height: 1;
+    vertical-align: baseline;
+    border: 0;
+    border-radius: 0;
+    color: inherit;
+}
+
+li,
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*---General settings---*/
+
+body {
+    background-image: url("../pictures/bg.jpg");
+}
+
+p, label, input, a, ul, li, ol, span, option, body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+    font-size: 2.4em;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+header {
+    background-color: #FEC5E5;
+    padding: 20px;
+    text-align: right;
+}
+
+#mainLogo {
+    float: left;
+    margin-top: -20px;
+    width: 170px;
+}
+
+#mainNav a {
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+#mainNav a:hover {
+    background-color: #fee9f5;
+}
+
+footer {
+    width: 100%;
+    background-color: darkslategrey;
+    height: 100px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+footer p {
+    padding-top: 40px;
+}
+
+#mainDiv {
+    min-height: 80vh;
+}
+
+/*---Order---*/
+
+form {
+    width: 500px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+input, select {
+    width: 488px;
+    border: 1px solid black;
+    height: 40px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+select#Cake {
+    width: 500px;
+}
+
+label {
+    background-color: white;
+    position: relative;
+    top: 7px;
+    left: 5px;
+    font-size: 0.9em;
+}
+
+input#Customisation, input#Slice {
+    height: initial;
+    width: initial;
+}
+
+label.Customisation {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-right: 20px;
+}
+
+label.Slice, label#Customise {
+    position: relative;
+    top: 0;
+    left: 5px;
+}
+
+input#btn {
+    color: white;
+    background-color: black;
+    border: none;
+    width: 300px;
+}
+
+form p {
+    margin-bottom: 10px;
+}
+
+
+form span {
+    display: block;
+    margin-top: -18px;
+    color: darkred;
+}
+
+#cookies {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    display: block;
+}
+
+#cookies button {
+    background-color: black;
+    border: 2px solid white;
+    padding: 5px;
+    margin: 20px;
+}
+
+#mainPic {
+    width: 100%;
+}
+
+#cakesLink, #orderLink {
+    width: 45%;
+    margin: 2.5%;
+    position: relative;
+}
+
+#cakeSpan {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    font-size: 3em;
+}
+
+#orderSpan {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 3em;
+}
+
+#cakesLinkPic, #orderLinkPic {
+    width: 100%;
+}
+
+#cakesLink, #orderLink {
+    border: 5px solid white;
+}
+
+#cakesLink:hover, #orderLink:hover {
+    border: 5px solid #FEC5E5;
+}
+
+#cakesLink:hover #cakeSpan, #orderLink:hover #orderSpan {
+    text-decoration: underline;
+}
+
+#twoLinks {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+/*---Cakes page---*/
+
+#monthCake {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#cakeOfTheMonth {
+    width: 100%;
+}
+
+#monthCake h2, #monthCake p {
+    text-align: center;
+}
+
+#flexCakes {
+    width: 90%;
+    padding: 5%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.smallCakeDiv {
+    width: 20%;
+    margin: 2.5%;
+    background-color: white;
+}
+
+.smallCake {
+    width: 100%;
+}
+
+.smallCakeDiv h2, .smallCakeDiv p {
+    text-align: center;
+}
+
+.confBtn {
+    background-color: #FEC5E5;
+    padding: 20px;
+    margin: 20px;
+    width: 40%;
+}
+
+#confirmationDiv {
+    background-color: white;
+    width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#navBtn {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    #cakeSpan, #orderSpan {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 800px) {
+    #flexCakes {
+        display: block;
+        width: 100%;
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    .smallCakeDiv {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    #cakeSpan, #orderSpan {
+        font-size: 1.3em;
+    }
+
+    #mainNav a {
+        display: block;
+        text-align: left;
+    }
+
+    #mainNav {
+        transform: translate(-250px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #bdf3f5;
+        height: 100%;
+        width: 250px;
+        transition: 0.4s ease-in-out;
+        z-index: 10;
+    }
+
+    header {
+        height: 30px;
+    }
+
+    #navBtn {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        font-size: 3em;
+        background-color: inherit;
+    }
+}
+
+@media (max-width: 585px) {
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    #flexCakes h2, #monthCake h2 {
+        margin-bottom: 0;
+    }
+
+    #twoLinks {
+        display: block;
+        width: 100%;
+    }
+
+    #cakesLink, #orderLink {
+        border: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #cakesLink:hover, #orderLink:hover {
+        border: 0;
+    }
+
+    #cakeSpan {
+        position: absolute;
+        top: -300px;
+    }
+
+    #cakeSpan, #orderSpan {
+        font-size: 2em;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    input, select {
+        width: 98%;
+        padding: 1%;
+    }
+
+    select#Cake {
+        width: 100%;
+    }
+
+    input#btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    #cakeSpan {
+        position: absolute;
+        top: -220px;
+    }
+}
+
+@media (max-width: 380px) {
+    #cakeSpan {
+        position: absolute;
+        top: -170px;
+    }
+}

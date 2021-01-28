@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] | Fairy Cakes</title>
+    <link rel="stylesheet" href="~/css/styles.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a asp-controller="Home" asp-action="Index"><img src="~/pictures/logofc.png" alt="Logotype" id="mainLogo" /></a>
+        <button id="navBtn">≡</button>
+        <nav id="mainNav">
+            <a asp-controller="Home" asp-action="Index">Start</a>
+            <a asp-controller="Home" asp-action="Cakes">Our Cakes</a>
+            <a asp-controller="Home" asp-action="Order">Order a Cake</a>
+        </nav>
+    </header>
+    <div id="mainDiv">
+        @RenderBody()
+    </div>
+    <footer>
+        <p>&copy; Fairy Cakes 2021</p>
+    </footer>
+    <script type="text/javascript" src="~/js/main.js"></script>
+</body>
+</html>

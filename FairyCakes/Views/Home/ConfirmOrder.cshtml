@@ -1,0 +1,19 @@
+﻿@model FairyCakes.Models.OrderModel
+@{
+    ViewData["Title"] = "Confirm Order";
+}
+
+<h1>Confirm your order</h1>
+
+<div id="confirmationDiv">
+    <p>Customer name: @ViewBag.CustomerName</p>
+    <p>Phone number: @ViewBag.Phone</p>
+    <p>Cake: @ViewBag.Cake</p>
+    <p>Size: @ViewBag.Slice</p>
+    <p>Customised message on cake: @ViewBag.CustomisationString</p>
+    <p>Pickup date: @ViewBag.PickupDay.Substring(0, 10)</p><br />
+    <p>Total price: £@ViewBag.TotalPrice</p>
+
+    <button class="confBtn">Change order</button>
+    <button class="confBtn">Confirm</button>
+</div>

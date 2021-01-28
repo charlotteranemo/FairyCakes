@@ -1,0 +1,20 @@
+﻿@{
+}
+<div id="cookies">
+    <h3>We have both cakes and cookies!</h3>
+    <p>By continuing using this site, you agree that we save cookies about your visit.</p>
+    <button>Read more</button><button onclick="hideCookies()">I understand</button>
+</div>
+
+<script type="text/javascript">
+    function hideCookies() {
+        sessionStorage.setItem('CookieWindow', "hide");
+        document.getElementById("cookies").style.display = "none";
+    }
+
+    if (sessionStorage.getItem('CookieWindow') == "hide") {
+        document.getElementById("cookies").style.display = "none";
+    } else if (!sessionStorage.getItem('CookieWindow')) {
+        document.getElementById("cookies").style.display = "block";
+    }
+</script>

@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+<img src="~/pictures/blueCake.jpg" alt="A blue cake" id="mainPic" />
+<h1>Fairy Cakes</h1>
+<h2>Cakes for every occasion!</h2>
+<div id="twoLinks">
+    <a asp-controller="Home" asp-action="Cakes" id="cakesLink"><img src="~/pictures/pinkCake.jpg" alt="A pink cake" id="cakesLinkPic" /><span id="cakeSpan">See our cakes</span></a>
+    <a asp-controller="Home" asp-action="Order" id="orderLink"><img src="~/pictures/blueCake2.jpg" alt="A pink cake" id="orderLinkPic" /><span id="orderSpan">Order a cake</span></a>
+</div>
+<partial name="~/Views/Shared/_Cookies.cshtml" />
